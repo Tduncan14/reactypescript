@@ -2,6 +2,8 @@ import React ,{useState} from 'react';
 import './App.css';
 import InputField from './components/InputField'
 import { Todo } from './components/model';
+import SingleTodo from './components/SingleTodo';
+import TodoList from './components/TodoList';
 
 
 
@@ -29,20 +31,26 @@ const App: React.FC = ()  =>{
 
 
 
-  const handleAdd = () => {
-    
+  const handleAdd = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (todo) {
+      setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
+      setTodo("");
+    }
+  };
 
 
-  }
 
-
-  console.log(todo,"this is the todo")
   return (
     <div className="App">
 
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-   
+      <TodoList todos = {todos} setTodos={setTodos}/>
+
+      
+    
     </div>
   );
 }
