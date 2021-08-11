@@ -41,6 +41,13 @@
 
 }
 
+.todos{
+    display:flex;
+    justify-content:space-evenly;
+    width:90%;
+    flex-wrap:wrap;
+}
+
 .todos_single {
 display:flex;
 width: 30%;
@@ -73,17 +80,14 @@ background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-
 }
 
 
-@media(max-width:1200px){
-    .todos_single {
-        width:40px;
-    }
-}
-
 
 
 @media(max-width: 700px){
 
- 
+    .todos_single {
+        width:40%;
+    }
+
 
     .input{
         width:95%;
