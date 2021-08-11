@@ -43,7 +43,7 @@
 
 .todos_single {
 display:flex;
-width:29.5%;
+width: 30%;
 border-radius:5px;
 padding:20px;
 margin-top:15px;
@@ -58,5 +58,42 @@ background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-
     padding: 5px;
     border: none;
     font-size: 20px;
-  
+}
+
+
+.todos_single:focus{
+    outline:none;
+}
+
+
+.icon{
+    margin-left:10px;
+    font-size:25px;
+    cursor:pointer;
+}
+
+
+@media(max-width:1200px){
+    .todos_single {
+        width:40px;
+    }
+}
+
+
+
+@media(max-width: 700px){
+
+ 
+
+    .input{
+        width:95%;
+    }
+
+    .todos {
+        width:95%;
+    }
+
+    .todos_single{
+        width:100%;
+    }
 }
